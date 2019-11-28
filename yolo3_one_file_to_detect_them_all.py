@@ -384,7 +384,7 @@ def _main_(args):
 
     # set some parameters
     net_h, net_w = 416, 416
-    obj_thresh, nms_thresh = 0.5, 0.45
+    obj_thresh, nms_thresh = 0.8, 0.8
     anchors = [[116,90,  156,198,  373,326],  [30,61, 62,45,  59,119], [10,13,  16,30,  33,23]]
     labels = ["person", "bicycle", "car", "motorbike", "aeroplane", "bus", "train", "truck", \
               "boat", "traffic light", "fire hydrant", "stop sign", "parking meter", "bench", \
@@ -405,7 +405,8 @@ def _main_(args):
     weight_reader.load_weights(yolov3)
 
     # preprocess the image
-    image = cv2.imread(image_path)
+    #image = cv2.imread(image_path)
+    image = cv2.VideoCapture(2)
     image_h, image_w, _ = image.shape
     new_image = preprocess_input(image, net_h, net_w)
 

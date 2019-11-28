@@ -60,7 +60,7 @@ def draw_boxes(image, boxes, labels, obj_thresh, quiet=True):
     for box in boxes:
         label_str = ''
         label = -1
-        
+
         for i in range(len(labels)):
             if box.classes[i] > obj_thresh:
                 if label_str != '': label_str += ', '
@@ -85,5 +85,9 @@ def draw_boxes(image, boxes, labels, obj_thresh, quiet=True):
                         fontScale=1e-3 * image.shape[0], 
                         color=(0,0,0), 
                         thickness=2)
-        
-    return image          
+    try:
+        print(region)
+        return image, region
+    except:
+        region = None
+        return image, region
