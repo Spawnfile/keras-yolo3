@@ -9,6 +9,8 @@ Raccoon Detection (1 class) (https://github.com/experiencor/raccoon_dataset) | 9
 Red Blood Cell Detection (3 classes) (https://github.com/experiencor/BCCD_Dataset) | 84% | https://imgur.com/a/uJl2lRI | check zoo | http://bit.do/ekQFc
 VOC (20 classes) (http://host.robots.ox.ac.uk/pascal/VOC/voc2012/) | 72% | https://youtu.be/0RmOI6hcfBI | check zoo | http://bit.do/ekQE5
 
+**-Added return bbox function for reachable bounding box coordinates for detection.**
+
 ## Todo list:
 - [x] Yolo3 detection
 - [x] Yolo3 training (warmup and multi-scale)

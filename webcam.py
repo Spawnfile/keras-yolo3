@@ -34,7 +34,7 @@ def _main_():
 
             for i in range(len(images)):
                 images[i], bbox = draw_boxes(images[i], batch_boxes[i], config['model']['labels'], obj_thresh) 
-                cv2.imshow('video with bboxes', images[i])
+                #cv2.imshow('video with bboxes', images[i])
                 try:
                     print(bbox)
                     print("detection var")
